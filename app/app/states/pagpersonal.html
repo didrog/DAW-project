@@ -1,0 +1,32 @@
+<section name="equipo">    
+    <h1>Hola {{priv.usuario}}</h1>
+    <p>Desde esta vista, podrás ver tu equipo favorito y mas opciones avanzadas</p>
+    <img width="50px" height="50px" src={{priv.equipo.crestUrl}}></img>
+    <label class="control-label"> {{priv.equipo.name}}</label>
+    <div class="table-responsive">
+        <table class="table">
+                <thead>
+                    <tr>
+                        <th>Num.</th>
+                        <th>Posición</th>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Nacionalidad</th>
+                        <th>Fin contrato</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="players in priv.jugadores.players | orderBy: 'jerseyNumber'">
+                        <td class="text-left">{{players.jerseyNumber}}</td>
+                        <td class="text-left">{{players.position}}</td>
+                        <td class="text-left">{{players.name}}</td>
+                        <td class="text-center">{{players.dateOfBirth | calcularEdad }}</td>
+                        <td class="text-left">{{players.nationality}}</td>
+                        <td class="text-center">{{players.contractUntil | formatearFecha}}</td>
+                        <td class="text-center">{{players.marketValue}}</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+</section>

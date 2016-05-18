@@ -1,0 +1,14 @@
+<section name="resultados">
+    <label class="control-label">Nombre de la liga: {{liga.nombreLiga}}</label>
+    <div class="table-responsive">
+        <ul class="nav nav-tabs">
+            <li role="presentation"><a ui-sref="infoLiga({index:liga.id})">Información Liga</a></li>
+            <li role="presentation"><a ui-sref="clasificacion({index:liga.id})">Clasificación</a></li>
+            <li role="presentation"  class="active"><a ui-sref="resultados({index:liga.id})">Resultados</a></li>
+        </ul>
+        
+        <calendario></calendario>
+        
+    </div>
+</section>
+

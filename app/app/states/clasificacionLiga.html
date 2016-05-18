@@ -1,0 +1,41 @@
+<section name="clasificacion">
+    <label class="control-label">Nombre de la liga: {{liga.nombreLiga}}</label>
+    <div class="table-responsive">
+    <ul class="nav nav-tabs">
+      <li role="presentation"><a ui-sref="infoLiga({index:liga.id})">Información Liga</a></li>
+      <li role="presentation" class="active"><a ui-sref="clasificacion">Clasificación</a></li>
+      <li role="presentation"><a ui-sref="resultados({index:liga.id})">Resultados</a></li>
+    </ul>
+        
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Pos.</th>
+                        <th>Equipo</th>
+                        <th>J</th>
+                        <th>G</th>
+                        <th>E</th>
+                        <th>P</th>
+                        <th>GF</th>
+                        <th>GC</th>
+                        <th>DG</th>
+                        <th>Puntos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="equipo in liga.liga.standing">
+                        <td class="text-left">{{equipo.position}}</td>
+                        <td class="text-left">{{equipo.teamName}}</td>
+                        <td class="text-left">{{equipo.playedGames}}</td>
+                        <td class="text-left">{{equipo.wins}}</td>
+                        <td class="text-left">{{equipo.draws}}</td>
+                        <td class="text-left">{{equipo.losses}}</td>
+                        <td class="text-left">{{equipo.goals}}</td>
+                        <td class="text-left">{{equipo.goalsAgainst}}</td>
+                        <td class="text-left">{{equipo.goalDifference}}</td>
+                        <td class="text-left">{{equipo.points}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</section>

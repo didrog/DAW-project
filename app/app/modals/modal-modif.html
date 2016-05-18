@@ -1,0 +1,26 @@
+<div class="modalacs">
+    <form>
+        <span class="">Modificación</span>
+        <fieldset class="form-group ">
+            <label class="sr-only" for="txtName">Nombre</label>
+            <input type="text" class="form-control" id="txtName" placeholder="Nombre" ng-model="cab.formulario.nombre">
+        </fieldset>
+        <fieldset class="form-group">
+            <label class="sr-only" for="txtPwd">Contraseña</label>
+            <input type="password" class="form-control" id="txtPwd" placeholder="Password" ng-model="cab.formulario.pwd">
+        </fieldset>
+         <fieldset class="form-group">
+            <label for="slcLiga">Selecciona una liga</label>
+            <select class="form-control" id="slcLiga" ng-model="cab.itemSelect" ng-change="cab.consultaEquipos()">
+                <option ng-repeat="liga in cab.ligas | orderBy: 'caption'" value="{{liga.id}}">{{liga.caption}}</option>
+            </select>
+          </fieldset>
+         <fieldset class="form-group">
+            <label for="slcEquipo">Selecciona tu equipo favorito</label>
+            <select class="form-control" id="slcEquipo" ng-model="cab.formulario.idFavorito">
+                <option ng-repeat="equipo in cab.equipos.teams | orderBy: 'shortName'" value="{{equipo._links.self | obtenerId}}">{{equipo.shortName}}</option>
+            </select>
+          </fieldset>
+        <button type="submit" class="btn btn-primary" ng-click="cab.modificarUsuario()">Modificar</button>
+    </form>
+</div>

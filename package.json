@@ -1,0 +1,15 @@
+{
+  "name": "project-daw",
+  "version": "0.0.1",
+  "description": "Poryecto WEB",
+  "main": "server.js",
+  "author": "Elias Nieto Iglesias",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.5.1",
+    "express": "^4.7.1",
+    "jsonwebtoken": "^6.2.0",
+    "method-override": "^2.1.2",
+    "mongoose": "~3.6.11"
+  }
+}

@@ -1,0 +1,13 @@
+<div class="col-sm-3 col-md-2 sidebar">
+    <div class="sidebar-nav">
+      <div class="navbar navbar-default" role="navigation">
+        <div>
+            <ul class="nav navbar-nav">
+                <li class="link-menu" ng-repeat="liga in menu.lista | orderBy: 'caption'" ng-bind-html-unsafe="liga.text" >
+                    <a class="a-menu" ui-sref="infoLiga({index:liga.id, name:liga.caption})">{{liga.caption}}</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+</di

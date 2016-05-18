@@ -1,0 +1,33 @@
+<div class="modalacs modalRegistro">
+    <!--<form action="">-->
+    <form>
+        <span class="">{{cab.opcion}}</span>
+        <fieldset class="form-group {{cab.visible}}">
+            <label class="sr-only" for="txtName">Nombre</label>
+            <input type="text" class="form-control" id="txtName" placeholder="Nombre" ng-model="cab.formulario.nombre">
+        </fieldset>
+        <fieldset class="form-group">
+            <label class="sr-only" for="txtMail">Correo electrónico</label>
+            <input type="email" class="form-control" id="txtMail" placeholder="Enter email" ng-model="cab.formulario.mail" required>
+        </fieldset>
+        <fieldset class="form-group">
+            <label class="sr-only" for="txtPwd">Contraseña</label>
+            <input type="password" class="form-control" id="txtPwd" placeholder="Password" ng-model="cab.formulario.pwd" required>
+        </fieldset>
+         <fieldset class="form-group {{cab.visible}}">
+            <label for="slcLiga">Selecciona una liga</label>
+            <select class="form-control" id="slcLiga" ng-model="cab.itemSelect" ng-change="cab.consultaEquipos()">
+                <option ng-repeat="liga in cab.ligas | orderBy: 'caption'" value="{{liga.id}}">{{liga.caption}}</option>
+            </select>
+          </fieldset>
+         <fieldset class="form-group {{cab.visible}}">
+            <label for="slcEquipo">Selecciona tu equipo favorito</label>
+            <select class="form-control" id="slcEquipo" ng-model="cab.formulario.idFavorito">
+                <option ng-repeat="equipo in cab.equipos.teams | orderBy: 'shortName'" value="{{equipo._links.self | obtenerId}}">{{equipo.shortName}}</option>
+            </select>
+          </fieldset>
+        <button type="submit" class="btn btn-primary {{cab.alta}}" ng-click="cab.altaUsuario()">Alta</button>
+        <button type="submit" class="btn btn-primary {{cab.login}}" ng-click="cab.accesoLogin()">Aceptar</button>
+        <span class="{{cab.loginError}}">{{cab.mensajeError}}</span>
+    </form>
+</div>

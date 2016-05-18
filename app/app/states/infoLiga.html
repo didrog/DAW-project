@@ -1,0 +1,27 @@
+<section name="infoLiga">
+    <label class="control-label">Nombre de la liga: {{liga.nombreLiga}}</label>
+    <div class="table-responsive">
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a ui-sref="infoLiga">Información Liga</a></li>
+            <li role="presentation"><a ui-sref="clasificacion({index:liga.id})">Clasificación</a></li>
+            <li role="presentation"><a ui-sref="resultados({index:liga.id})">Resultados</a></li>
+        </ul>
+        <table class="table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Nombre del equipo</th>
+                        <th>Valor de mercado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr ng-repeat="equipo in liga.info.teams | orderBy: 'name'">
+                        <td class="text-left"><img width="50px" height="50px" src="{{equipo.crestUrl}}"/></td>
+                        <td class="text-left vertical-align-center"><a ui-sref="equipo({url:equipo._links.players.href})">{{equipo.name}}</a></td>
+                        <td class="text-left vertical-align-center">{{equipo.squadMarketValue}}</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+</section>

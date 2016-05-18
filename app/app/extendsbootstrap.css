@@ -1,0 +1,137 @@
+*{
+  -webkit-border-radius: 4px !important;
+     -moz-border-radius: 4px !important;
+          border-radius: 4px !important;
+}
+html{
+    width: 90%;
+    margin: 0 5%;
+}
+
+/* make sidebar nav vertical */ 
+@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+  }
+  .sidebar-nav .navbar ul:not {
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+.vertical-align-center{
+    vertical-align: middle !important;
+}
+.link-menu:hover{
+	background-color: #A4A4A4;
+}
+.navbar-default{
+	border-color: none !important;
+}
+
+.equipo{
+    width: 33%;
+}
+.resultado{
+    width: 15%;
+}
+.fecha{
+    float: right;
+    width: 18%;
+}
+.container-resultados{
+    width: 100%;
+    padding: 2%;
+    font-size: 0.85em;
+}
+.no-padding{
+    padding: 0px !important;
+}
+.tit-jornada{
+    width: 100%;
+    
+    background-color: #DFD9D8;
+    padding-top: 4%;
+    margin-top: 10%;
+}
+.navbar-default {
+    background-color: #DFD9D8 !important;
+    border-color: #DFD9D8 !important;
+}
+.panel-cabecera{
+    background-color: #DFD9D8 !important;
+    border-color: #DFD9D8 !important;
+    height: 120px;
+    border: 10px solid #6964FF !important;
+    margin-bottom: 10px;
+}
+.float-left{
+    float:left;
+}
+.float-right{
+    float:right;
+}
+.error-text{
+    color: red;
+    margin: 50px 0 0 50px; 
+}
+.error{
+    width: 48%;
+    height: 27%;
+    margin-top: 10%;
+    margin-left: 25%;
+    border: 10px solid #6964FF !important;
+}
+.tit-page{
+    font-size: 5em;
+    font-weight: bold;
+    color: #FFF;
+    margin: 0 0 0 10%;
+    text-shadow: -2px 0 #6964FF, 0 2px #6964FF, 2px 0 #6964FF, 0 -2px #6964FF;
+}
+.all-text{
+    font-size: 1.17em;
+    text-shadow: -2px 0 #FFF, 0 2px #FFF, 2px 0 #FFF, 0 -2px #FFF;
+    color: red;
+}
+.botones-access{
+    margin: 8px 20px 0 0;
+    height: 150px;
+}
+.acs{
+    width: 100%;
+	background-color: #C4C2E6;
+    margin-top: 6px;
+    color: red;
+    display: block;
+    border-radius: 10px !important;
+    text-decoration: none;
+}
+.a-menu:focus{
+    background-color: #C5C2F3 !important;
+}
+.tit-jornada{
+    color: #000;
+    font-size: 1em;
+    font-weight: bold;
+}
+.modalacs{
+    width: 100% !important;
+    height: 80% !important;
+    padding: 10%;
+    background-color: #DFD9D8 ;
+    border: 6px solid #6964FF;
+}
+.modalRegistro{
+
+}

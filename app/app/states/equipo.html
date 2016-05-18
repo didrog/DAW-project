@@ -1,0 +1,29 @@
+<section name="equipo">
+    <label class="control-label">Nombre del equipo: {{equipo.jugadores.count}}</label>
+    <div class="table-responsive">
+        <table class="table">
+                <thead>
+                    <tr>
+                        <th>Num.</th>
+                        <th>Posición</th>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Nacionalidad</th>
+                        <th>Fin contrato</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="players in equipo.jugadores.players | orderBy: 'jerseyNumber'">
+                        <td class="text-left">{{players.jerseyNumber}}</td>
+                        <td class="text-left">{{players.position}}</td>
+                        <td class="text-left">{{players.name}}</td>
+                        <td class="text-center">{{players.dateOfBirth | calcularEdad }}</td>
+                        <td class="text-left">{{players.nationality}}</td>
+                        <td class="text-center">{{players.contractUntil | formatearFecha}}</td>
+                        <td class="text-center">{{players.marketValue}}</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+</section>

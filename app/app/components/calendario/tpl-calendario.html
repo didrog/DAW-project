@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6" ng-repeat="calendario in cal.calendario" >
+
+            <ul clas="list-group">
+                <div class="tit-jornada">
+                <spam>Jornada {{calendario[0].matchday}}</spam></div>
+                <li class="list-group-item no-padding" ng-repeat="partido in calendario">
+                    <div class="container container-resultados ">
+                        <div class="equipo float-left"><span>{{partido.homeTeamName}}</span></div>
+                        <div class="resultado float-left"><span>{{partido.result.goalsHomeTeam}} - {{partido.result.goalsAwayTeam}}</span></div>
+                        <div class="equipo float-left"><span>{{partido.awayTeamName}}</span></div>
+                        <div class="fecha"><span>{{partido.date | date: 'dd-MM-yyyy'}}</span></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
